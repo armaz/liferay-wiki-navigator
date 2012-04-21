@@ -1,0 +1,20 @@
+ul.wiki_navigator a {
+  color: #000000; }
+
+ul.wiki_navigator li:hover a {
+  color: #0066cc; }
+
+ul.wiki_navigator ul {
+  margin-top: 0px;
+  margin-bottom: 0px; }
+
+ul.wiki_navigator li.valgt a {
+  font-weight: bold;
+  color: #be1527; }
+
+ul.wiki_navigator li.wpage-rootlevel {
+  font-weight: bold; }
+
+ul.wiki_navigator li.wpage-leaflevel {
+  font-style: normal; }
+

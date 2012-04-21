@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="no.uninett.fas.agora.wikinavigator.model.WikiIndex">
+		<field name="nodeId" type="long" />
+		<field name="content" type="String">
+			<hint name="max-length">2000000</hint>
+		</field>
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="auto" type="boolean" />
+	</model>
+</model-hints>

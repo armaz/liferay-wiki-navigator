@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/fas/!svn/ver/4005/AgoraWikiNavigator2-portlet/trunk/docroot/WEB-INF/tld
+END
+liferay-ui.tld
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/fas/!svn/ver/4005/AgoraWikiNavigator2-portlet/trunk/docroot/WEB-INF/tld/liferay-ui.tld
+END
+aui.tld
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/fas/!svn/ver/4005/AgoraWikiNavigator2-portlet/trunk/docroot/WEB-INF/tld/aui.tld
+END
+liferay-aui.tld
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/fas/!svn/ver/4005/AgoraWikiNavigator2-portlet/trunk/docroot/WEB-INF/tld/liferay-aui.tld
+END
+liferay-faces.tld
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/fas/!svn/ver/4005/AgoraWikiNavigator2-portlet/trunk/docroot/WEB-INF/tld/liferay-faces.tld
+END
+liferay-theme.tld
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/fas/!svn/ver/4005/AgoraWikiNavigator2-portlet/trunk/docroot/WEB-INF/tld/liferay-theme.tld
+END
+liferay-portlet.tld
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/fas/!svn/ver/4005/AgoraWikiNavigator2-portlet/trunk/docroot/WEB-INF/tld/liferay-portlet.tld
+END
+liferay-portlet-ext.tld
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/fas/!svn/ver/4005/AgoraWikiNavigator2-portlet/trunk/docroot/WEB-INF/tld/liferay-portlet-ext.tld
+END
+liferay-security.tld
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/fas/!svn/ver/4005/AgoraWikiNavigator2-portlet/trunk/docroot/WEB-INF/tld/liferay-security.tld
+END
+liferay-util.tld
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/fas/!svn/ver/4005/AgoraWikiNavigator2-portlet/trunk/docroot/WEB-INF/tld/liferay-util.tld
+END

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="no.uninett.fas.agora.wikinavigator.model.impl.WikiIndexModelImpl">
+		<attributes>
+			<id name="nodeId" />
+			<basic name="content" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="auto">
+				<column name="AUTO_" />
+			</basic>
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="no.uninett.fas.agora.wikinavigator.model.impl.WikiIndexImpl" name="WikiIndex">
+		<table name="UN_WikiIndex" />
+		<attributes />
+	</entity>
+</entity-mappings>
