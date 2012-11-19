@@ -3,6 +3,7 @@
 
 <hibernate-mapping default-lazy="false" auto-import="false">
 	<import class="no.uninett.fas.agora.wikinavigator.model.WikiIndex" />
+	<import class="no.uninett.fas.agora.wikinavigator.model.WikiIndexPage" />
 	<class name="no.uninett.fas.agora.wikinavigator.model.impl.WikiIndexImpl" table="UN_WikiIndex">
 		<cache usage="read-write" />
 		<id name="nodeId" type="long">
@@ -12,5 +13,14 @@
 		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 		<property name="auto" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="auto_" />
+	</class>
+	<class name="no.uninett.fas.agora.wikinavigator.model.impl.WikiIndexPageImpl" table="UN_WikiIndexPage">
+		<cache usage="read-write" />
+		<id name="wikiPageId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="order_" />
+		<property name="parentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 	</class>
 </hibernate-mapping>

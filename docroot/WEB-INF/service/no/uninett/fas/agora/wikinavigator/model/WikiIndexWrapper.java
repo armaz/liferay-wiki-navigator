@@ -16,6 +16,9 @@ package no.uninett.fas.agora.wikinavigator.model;
 
 import com.liferay.portal.model.ModelWrapper;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * <p>
  * This class is a wrapper for {@link WikiIndex}.
@@ -36,6 +39,50 @@ public class WikiIndexWrapper implements WikiIndex, ModelWrapper<WikiIndex> {
 
 	public String getModelClassName() {
 		return WikiIndex.class.getName();
+	}
+
+	public Map<String, Object> getModelAttributes() {
+		Map<String, Object> attributes = new HashMap<String, Object>();
+
+		attributes.put("nodeId", getNodeId());
+		attributes.put("content", getContent());
+		attributes.put("companyId", getCompanyId());
+		attributes.put("groupId", getGroupId());
+		attributes.put("auto", getAuto());
+
+		return attributes;
+	}
+
+	public void setModelAttributes(Map<String, Object> attributes) {
+		Long nodeId = (Long)attributes.get("nodeId");
+
+		if (nodeId != null) {
+			setNodeId(nodeId);
+		}
+
+		String content = (String)attributes.get("content");
+
+		if (content != null) {
+			setContent(content);
+		}
+
+		Long companyId = (Long)attributes.get("companyId");
+
+		if (companyId != null) {
+			setCompanyId(companyId);
+		}
+
+		Long groupId = (Long)attributes.get("groupId");
+
+		if (groupId != null) {
+			setGroupId(groupId);
+		}
+
+		Boolean auto = (Boolean)attributes.get("auto");
+
+		if (auto != null) {
+			setAuto(auto);
+		}
 	}
 
 	/**
@@ -197,8 +244,7 @@ public class WikiIndexWrapper implements WikiIndex, ModelWrapper<WikiIndex> {
 		return new WikiIndexWrapper((WikiIndex)_wikiIndex.clone());
 	}
 
-	public int compareTo(
-		no.uninett.fas.agora.wikinavigator.model.WikiIndex wikiIndex) {
+	public int compareTo(WikiIndex wikiIndex) {
 		return _wikiIndex.compareTo(wikiIndex);
 	}
 
@@ -207,11 +253,11 @@ public class WikiIndexWrapper implements WikiIndex, ModelWrapper<WikiIndex> {
 		return _wikiIndex.hashCode();
 	}
 
-	public com.liferay.portal.model.CacheModel<no.uninett.fas.agora.wikinavigator.model.WikiIndex> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<WikiIndex> toCacheModel() {
 		return _wikiIndex.toCacheModel();
 	}
 
-	public no.uninett.fas.agora.wikinavigator.model.WikiIndex toEscapedModel() {
+	public WikiIndex toEscapedModel() {
 		return new WikiIndexWrapper(_wikiIndex.toEscapedModel());
 	}
 

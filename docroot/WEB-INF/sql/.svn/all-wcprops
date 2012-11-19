@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/fas/!svn/ver/4514/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/sql
+END
+tables.sql
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/fas/!svn/ver/4514/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/sql/tables.sql
+END
+sequences.sql
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/fas/!svn/ver/4293/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/sql/sequences.sql
+END
+indexes.properties
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/fas/!svn/ver/4293/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/sql/indexes.properties
+END
+indexes.sql
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/fas/!svn/ver/4293/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/sql/indexes.sql
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/fas/!svn/ver/4326/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/no/uninett/fas/agora/wikinavigator/service/base
+END
+WikiIndexPageLocalServiceBaseImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/fas/!svn/ver/4326/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/no/uninett/fas/agora/wikinavigator/service/base/WikiIndexPageLocalServiceBaseImpl.java
+END
+WikiIndexPageLocalServiceClpInvoker.java
+K 25
+svn:wc:ra_dav:version-url
+V 182
+/fas/!svn/ver/4293/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/no/uninett/fas/agora/wikinavigator/service/base/WikiIndexPageLocalServiceClpInvoker.java
+END
+WikiIndexLocalServiceBaseImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 176
+/fas/!svn/ver/4326/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/no/uninett/fas/agora/wikinavigator/service/base/WikiIndexLocalServiceBaseImpl.java
+END
+WikiIndexLocalServiceClpInvoker.java
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/fas/!svn/ver/4293/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/no/uninett/fas/agora/wikinavigator/service/base/WikiIndexLocalServiceClpInvoker.java
+END

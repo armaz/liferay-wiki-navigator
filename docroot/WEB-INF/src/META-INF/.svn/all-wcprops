@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/fas/!svn/ver/4514/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/META-INF
+END
+infrastructure-spring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/fas/!svn/ver/4293/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/META-INF/infrastructure-spring.xml
+END
+cluster-spring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/fas/!svn/ver/4326/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/META-INF/cluster-spring.xml
+END
+hibernate-spring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/fas/!svn/ver/4326/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/META-INF/hibernate-spring.xml
+END
+portlet-orm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/fas/!svn/ver/4326/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/META-INF/portlet-orm.xml
+END
+shard-data-source-spring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/fas/!svn/ver/4326/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/META-INF/shard-data-source-spring.xml
+END
+dynamic-data-source-spring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/fas/!svn/ver/4326/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/META-INF/dynamic-data-source-spring.xml
+END
+portlet-spring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/fas/!svn/ver/4326/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/META-INF/portlet-spring.xml
+END
+base-spring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/fas/!svn/ver/4326/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/META-INF/base-spring.xml
+END
+portlet-model-hints.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/fas/!svn/ver/4514/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/META-INF/portlet-model-hints.xml
+END
+portlet-hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/fas/!svn/ver/4293/agora/plugins-sdk/portlets/AgoraWikiNavigator2-portlet/docroot/WEB-INF/src/META-INF/portlet-hbm.xml
+END

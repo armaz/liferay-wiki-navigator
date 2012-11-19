@@ -17,6 +17,7 @@ package no.uninett.fas.agora.wikinavigator.model;
 import com.liferay.portal.kernel.bean.AutoEscapeBeanHandler;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.util.StringBundler;
+import com.liferay.portal.model.BaseModel;
 import com.liferay.portal.model.impl.BaseModelImpl;
 
 import no.uninett.fas.agora.wikinavigator.service.WikiIndexLocalServiceUtil;
@@ -24,6 +25,9 @@ import no.uninett.fas.agora.wikinavigator.service.WikiIndexLocalServiceUtil;
 import java.io.Serializable;
 
 import java.lang.reflect.Proxy;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author armaz
@@ -54,6 +58,52 @@ public class WikiIndexClp extends BaseModelImpl<WikiIndex> implements WikiIndex 
 
 	public void setPrimaryKeyObj(Serializable primaryKeyObj) {
 		setPrimaryKey(((Long)primaryKeyObj).longValue());
+	}
+
+	@Override
+	public Map<String, Object> getModelAttributes() {
+		Map<String, Object> attributes = new HashMap<String, Object>();
+
+		attributes.put("nodeId", getNodeId());
+		attributes.put("content", getContent());
+		attributes.put("companyId", getCompanyId());
+		attributes.put("groupId", getGroupId());
+		attributes.put("auto", getAuto());
+
+		return attributes;
+	}
+
+	@Override
+	public void setModelAttributes(Map<String, Object> attributes) {
+		Long nodeId = (Long)attributes.get("nodeId");
+
+		if (nodeId != null) {
+			setNodeId(nodeId);
+		}
+
+		String content = (String)attributes.get("content");
+
+		if (content != null) {
+			setContent(content);
+		}
+
+		Long companyId = (Long)attributes.get("companyId");
+
+		if (companyId != null) {
+			setCompanyId(companyId);
+		}
+
+		Long groupId = (Long)attributes.get("groupId");
+
+		if (groupId != null) {
+			setGroupId(groupId);
+		}
+
+		Boolean auto = (Boolean)attributes.get("auto");
+
+		if (auto != null) {
+			setAuto(auto);
+		}
 	}
 
 	public long getNodeId() {
@@ -98,6 +148,14 @@ public class WikiIndexClp extends BaseModelImpl<WikiIndex> implements WikiIndex 
 
 	public void setAuto(boolean auto) {
 		_auto = auto;
+	}
+
+	public BaseModel<?> getWikiIndexRemoteModel() {
+		return _wikiIndexRemoteModel;
+	}
+
+	public void setWikiIndexRemoteModel(BaseModel<?> wikiIndexRemoteModel) {
+		_wikiIndexRemoteModel = wikiIndexRemoteModel;
 	}
 
 	public void persist() throws SystemException {
@@ -229,4 +287,5 @@ public class WikiIndexClp extends BaseModelImpl<WikiIndex> implements WikiIndex 
 	private long _companyId;
 	private long _groupId;
 	private boolean _auto;
+	private BaseModel<?> _wikiIndexRemoteModel;
 }

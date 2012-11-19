@@ -1,15 +1,17 @@
 ul.wiki_navigator a {
 	color: #000000;
 }
-ul.wiki_navigator li:hover a {
+
+ul.wiki_navigator li a:hover {
 	color: #0066cc;
 }
+
 ul.wiki_navigator ul {
 	margin-top : 0px;
 	margin-bottom: 0px;
 }
 
-ul.wiki_navigator li.valgt a {
+ul.wiki_navigator li.valgt>a {
 	font-weight: bold;
 	color: #be1527;
 }
@@ -20,3 +22,29 @@ ul.wiki_navigator li.wpage-rootlevel {
 ul.wiki_navigator li.wpage-leaflevel {
 	font-style: normal;
 }
+
+.wikinavigator-portlet .page-actions.top-actions {
+    margin-top: 0;
+    text-align: right;
+}
+
+.wikinavigator-portlet input {
+
+	font-size : 11px;
+	background-image: url("../images/forms/input_shadow.png");
+	background-repeat: no-repeat;
+    border-color: #BFBFBF #DEDEDE #DEDEDE #BFBFBF;
+    border-style: solid;
+    border-width: 1px;
+    font: 1em Arial,Helvetica,Verdana,sans-serif;
+    padding: 5px 1px;
+        -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    
+
+
+}
+	

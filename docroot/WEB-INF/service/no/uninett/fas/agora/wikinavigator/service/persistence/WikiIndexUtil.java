@@ -272,10 +272,10 @@ public class WikiIndexUtil {
 		return _persistence;
 	}
 
+	/**
+	 * @deprecated
+	 */
 	public void setPersistence(WikiIndexPersistence persistence) {
-		_persistence = persistence;
-
-		ReferenceRegistry.registerReference(WikiIndexUtil.class, "_persistence");
 	}
 
 	private static WikiIndexPersistence _persistence;

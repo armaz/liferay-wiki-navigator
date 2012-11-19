@@ -2,8 +2,7 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	<bean id="no.uninett.fas.agora.wikinavigator.service.WikiIndexLocalService" class="no.uninett.fas.agora.wikinavigator.service.impl.WikiIndexLocalServiceImpl" />
-	<bean id="no.uninett.fas.agora.wikinavigator.service.WikiIndexLocalServiceUtil" class="no.uninett.fas.agora.wikinavigator.service.WikiIndexLocalServiceUtil">
-		<property name="service" ref="no.uninett.fas.agora.wikinavigator.service.WikiIndexLocalService" />
-	</bean>
 	<bean id="no.uninett.fas.agora.wikinavigator.service.persistence.WikiIndexPersistence" class="no.uninett.fas.agora.wikinavigator.service.persistence.WikiIndexPersistenceImpl" parent="basePersistence" />
+	<bean id="no.uninett.fas.agora.wikinavigator.service.WikiIndexPageLocalService" class="no.uninett.fas.agora.wikinavigator.service.impl.WikiIndexPageLocalServiceImpl" />
+	<bean id="no.uninett.fas.agora.wikinavigator.service.persistence.WikiIndexPagePersistence" class="no.uninett.fas.agora.wikinavigator.service.persistence.WikiIndexPagePersistenceImpl" parent="basePersistence" />
 </beans>

@@ -60,25 +60,32 @@ public class WikiIndexLocalServiceWrapper implements WikiIndexLocalService,
 	* Deletes the wiki index with the primary key from the database. Also notifies the appropriate model listeners.
 	*
 	* @param nodeId the primary key of the wiki index
+	* @return the wiki index that was removed
 	* @throws PortalException if a wiki index with the primary key could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public void deleteWikiIndex(long nodeId)
+	public no.uninett.fas.agora.wikinavigator.model.WikiIndex deleteWikiIndex(
+		long nodeId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
-		_wikiIndexLocalService.deleteWikiIndex(nodeId);
+		return _wikiIndexLocalService.deleteWikiIndex(nodeId);
 	}
 
 	/**
 	* Deletes the wiki index from the database. Also notifies the appropriate model listeners.
 	*
 	* @param wikiIndex the wiki index
+	* @return the wiki index that was removed
 	* @throws SystemException if a system exception occurred
 	*/
-	public void deleteWikiIndex(
+	public no.uninett.fas.agora.wikinavigator.model.WikiIndex deleteWikiIndex(
 		no.uninett.fas.agora.wikinavigator.model.WikiIndex wikiIndex)
 		throws com.liferay.portal.kernel.exception.SystemException {
-		_wikiIndexLocalService.deleteWikiIndex(wikiIndex);
+		return _wikiIndexLocalService.deleteWikiIndex(wikiIndex);
+	}
+
+	public com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery() {
+		return _wikiIndexLocalService.dynamicQuery();
 	}
 
 	/**
@@ -252,6 +259,13 @@ public class WikiIndexLocalServiceWrapper implements WikiIndexLocalService,
 	*/
 	public void setBeanIdentifier(java.lang.String beanIdentifier) {
 		_wikiIndexLocalService.setBeanIdentifier(beanIdentifier);
+	}
+
+	public java.lang.Object invokeMethod(java.lang.String name,
+		java.lang.String[] parameterTypes, java.lang.Object[] arguments)
+		throws java.lang.Throwable {
+		return _wikiIndexLocalService.invokeMethod(name, parameterTypes,
+			arguments);
 	}
 
 	/**

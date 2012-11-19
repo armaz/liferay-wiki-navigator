@@ -19,6 +19,8 @@ import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.transaction.Isolation;
 import com.liferay.portal.kernel.transaction.Propagation;
 import com.liferay.portal.kernel.transaction.Transactional;
+import com.liferay.portal.service.BaseLocalService;
+import com.liferay.portal.service.InvokableLocalService;
 import com.liferay.portal.service.PersistedModelLocalService;
 
 /**
@@ -36,7 +38,8 @@ import com.liferay.portal.service.PersistedModelLocalService;
  */
 @Transactional(isolation = Isolation.PORTAL, rollbackFor =  {
 	PortalException.class, SystemException.class})
-public interface WikiIndexLocalService extends PersistedModelLocalService {
+public interface WikiIndexLocalService extends BaseLocalService,
+	InvokableLocalService, PersistedModelLocalService {
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
@@ -67,10 +70,12 @@ public interface WikiIndexLocalService extends PersistedModelLocalService {
 	* Deletes the wiki index with the primary key from the database. Also notifies the appropriate model listeners.
 	*
 	* @param nodeId the primary key of the wiki index
+	* @return the wiki index that was removed
 	* @throws PortalException if a wiki index with the primary key could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public void deleteWikiIndex(long nodeId)
+	public no.uninett.fas.agora.wikinavigator.model.WikiIndex deleteWikiIndex(
+		long nodeId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
 
@@ -78,11 +83,14 @@ public interface WikiIndexLocalService extends PersistedModelLocalService {
 	* Deletes the wiki index from the database. Also notifies the appropriate model listeners.
 	*
 	* @param wikiIndex the wiki index
+	* @return the wiki index that was removed
 	* @throws SystemException if a system exception occurred
 	*/
-	public void deleteWikiIndex(
+	public no.uninett.fas.agora.wikinavigator.model.WikiIndex deleteWikiIndex(
 		no.uninett.fas.agora.wikinavigator.model.WikiIndex wikiIndex)
 		throws com.liferay.portal.kernel.exception.SystemException;
+
+	public com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery();
 
 	/**
 	* Performs a dynamic query on the database and returns the matching rows.
@@ -234,4 +242,8 @@ public interface WikiIndexLocalService extends PersistedModelLocalService {
 	* @param beanIdentifier the Spring bean ID for this bean
 	*/
 	public void setBeanIdentifier(java.lang.String beanIdentifier);
+
+	public java.lang.Object invokeMethod(java.lang.String name,
+		java.lang.String[] parameterTypes, java.lang.Object[] arguments)
+		throws java.lang.Throwable;
 }

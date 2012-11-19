@@ -16,12 +16,30 @@
 			<basic name="auto">
 				<column name="AUTO_" />
 			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="no.uninett.fas.agora.wikinavigator.model.impl.WikiIndexPageModelImpl">
+		<attributes>
+			<id name="wikiPageId" />
+			<basic name="title" />
+			<basic name="order">
+				<column name="ORDER_" />
+			</basic>
+			<basic name="parentId" />
+			<transient name="modelAttributes" />
 			<transient name="primaryKey" />
 			<transient name="primaryKeyObj" />
 		</attributes>
 	</mapped-superclass>
 	<entity class="no.uninett.fas.agora.wikinavigator.model.impl.WikiIndexImpl" name="WikiIndex">
 		<table name="UN_WikiIndex" />
+		<attributes />
+	</entity>
+	<entity class="no.uninett.fas.agora.wikinavigator.model.impl.WikiIndexPageImpl" name="WikiIndexPage">
+		<table name="UN_WikiIndexPage" />
 		<attributes />
 	</entity>
 </entity-mappings>

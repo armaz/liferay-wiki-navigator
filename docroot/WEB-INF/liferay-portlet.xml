@@ -11,6 +11,9 @@
 		<footer-portlet-javascript>
 			/js/main.js
 		</footer-portlet-javascript>
+		<footer-portlet-javascript>
+			/js/jquery-ui-1.8.21.custom.min.js
+		</footer-portlet-javascript>
 		<css-class-wrapper>wikinavigator-portlet</css-class-wrapper>
 	</portlet>
 	<role-mapper>

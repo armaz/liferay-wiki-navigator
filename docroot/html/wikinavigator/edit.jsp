@@ -17,11 +17,5 @@
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
 
 <portlet:defineObjects />
-<%@page import="no.uninett.fas.agora.wikinavigator.service.WikiIndexLocalServiceUtil"%>
-<%@include file="init.jsp" %>
 
-<portlet:actionURL name="autoUpdate" var="autoUpdateURL" ></portlet:actionURL>
-
-<aui:form action="autoUpdateURL" >
-	<aui:input name="auto" type="checkbox"></aui:input>
-</aui:form>
+This is the <b>WikiNavigator</b> portlet in Edit mode.

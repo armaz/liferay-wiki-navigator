@@ -15,9 +15,8 @@
 package no.uninett.fas.agora.wikinavigator.service;
 
 import com.liferay.portal.kernel.bean.PortletBeanLocatorUtil;
-import com.liferay.portal.kernel.util.ClassLoaderProxy;
-import com.liferay.portal.kernel.util.MethodCache;
 import com.liferay.portal.kernel.util.ReferenceRegistry;
+import com.liferay.portal.service.InvokableLocalService;
 
 /**
  * The utility for the wiki index local service. This utility wraps {@link no.uninett.fas.agora.wikinavigator.service.impl.WikiIndexLocalServiceImpl} and is the primary access point for service operations in application layer code running on the local server.
@@ -67,25 +66,32 @@ public class WikiIndexLocalServiceUtil {
 	* Deletes the wiki index with the primary key from the database. Also notifies the appropriate model listeners.
 	*
 	* @param nodeId the primary key of the wiki index
+	* @return the wiki index that was removed
 	* @throws PortalException if a wiki index with the primary key could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public static void deleteWikiIndex(long nodeId)
+	public static no.uninett.fas.agora.wikinavigator.model.WikiIndex deleteWikiIndex(
+		long nodeId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
-		getService().deleteWikiIndex(nodeId);
+		return getService().deleteWikiIndex(nodeId);
 	}
 
 	/**
 	* Deletes the wiki index from the database. Also notifies the appropriate model listeners.
 	*
 	* @param wikiIndex the wiki index
+	* @return the wiki index that was removed
 	* @throws SystemException if a system exception occurred
 	*/
-	public static void deleteWikiIndex(
+	public static no.uninett.fas.agora.wikinavigator.model.WikiIndex deleteWikiIndex(
 		no.uninett.fas.agora.wikinavigator.model.WikiIndex wikiIndex)
 		throws com.liferay.portal.kernel.exception.SystemException {
-		getService().deleteWikiIndex(wikiIndex);
+		return getService().deleteWikiIndex(wikiIndex);
+	}
+
+	public static com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery() {
+		return getService().dynamicQuery();
 	}
 
 	/**
@@ -261,40 +267,39 @@ public class WikiIndexLocalServiceUtil {
 		getService().setBeanIdentifier(beanIdentifier);
 	}
 
+	public static java.lang.Object invokeMethod(java.lang.String name,
+		java.lang.String[] parameterTypes, java.lang.Object[] arguments)
+		throws java.lang.Throwable {
+		return getService().invokeMethod(name, parameterTypes, arguments);
+	}
+
 	public static void clearService() {
 		_service = null;
 	}
 
 	public static WikiIndexLocalService getService() {
 		if (_service == null) {
-			Object object = PortletBeanLocatorUtil.locate(ClpSerializer.getServletContextName(),
+			InvokableLocalService invokableLocalService = (InvokableLocalService)PortletBeanLocatorUtil.locate(ClpSerializer.getServletContextName(),
 					WikiIndexLocalService.class.getName());
-			ClassLoader portletClassLoader = (ClassLoader)PortletBeanLocatorUtil.locate(ClpSerializer.getServletContextName(),
-					"portletClassLoader");
 
-			ClassLoaderProxy classLoaderProxy = new ClassLoaderProxy(object,
-					WikiIndexLocalService.class.getName(), portletClassLoader);
-
-			_service = new WikiIndexLocalServiceClp(classLoaderProxy);
-
-			ClpSerializer.setClassLoader(portletClassLoader);
+			if (invokableLocalService instanceof WikiIndexLocalService) {
+				_service = (WikiIndexLocalService)invokableLocalService;
+			}
+			else {
+				_service = new WikiIndexLocalServiceClp(invokableLocalService);
+			}
 
 			ReferenceRegistry.registerReference(WikiIndexLocalServiceUtil.class,
 				"_service");
-			MethodCache.remove(WikiIndexLocalService.class);
 		}
 
 		return _service;
 	}
 
+	/**
+	 * @deprecated
+	 */
 	public void setService(WikiIndexLocalService service) {
-		MethodCache.remove(WikiIndexLocalService.class);
-
-		_service = service;
-
-		ReferenceRegistry.registerReference(WikiIndexLocalServiceUtil.class,
-			"_service");
-		MethodCache.remove(WikiIndexLocalService.class);
 	}
 
 	private static WikiIndexLocalService _service;

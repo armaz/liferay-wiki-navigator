@@ -19,6 +19,7 @@ import com.liferay.portal.kernel.messaging.Message;
 
 import no.uninett.fas.agora.wikinavigator.service.ClpSerializer;
 import no.uninett.fas.agora.wikinavigator.service.WikiIndexLocalServiceUtil;
+import no.uninett.fas.agora.wikinavigator.service.WikiIndexPageLocalServiceUtil;
 
 /**
  * @author Brian Wing Shun Chan
@@ -36,6 +37,8 @@ public class ClpMessageListener extends BaseMessageListener {
 		if (command.equals("undeploy") &&
 				servletContextName.equals(getServletContextName())) {
 			WikiIndexLocalServiceUtil.clearService();
+
+			WikiIndexPageLocalServiceUtil.clearService();
 		}
 	}
 }

@@ -10,4 +10,12 @@
 		<field name="groupId" type="long" />
 		<field name="auto" type="boolean" />
 	</model>
+	<model name="no.uninett.fas.agora.wikinavigator.model.WikiIndexPage">
+		<field name="wikiPageId" type="long" />
+		<field name="title" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="order" type="int" />
+		<field name="parentId" type="long" />
+	</model>
 </model-hints>

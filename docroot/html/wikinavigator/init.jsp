@@ -30,6 +30,7 @@
 <%@ page import="com.liferay.portal.model.Group"%>
 <%@ page import="com.liferay.portal.service.GroupLocalServiceUtil"%>
 <%@ page import="com.liferay.portal.util.PortalUtil"%>
+<%@ page import="com.liferay.portal.kernel.util.HttpUtil" %>
 <%@
 page import="com.liferay.portal.kernel.bean.BeanParamUtil" %>
 <%@
@@ -56,8 +57,16 @@ page import="java.util.Map" %>
 
 <%@ page import="no.uninett.fas.agora.wikinavigator.*"%>
 <%@ page import="no.uninett.fas.agora.wikinavigator.model.*"%>
+<%@ page import="no.uninett.fas.agora.wikinavigator.service.*"%>
 
+<%@page import="com.liferay.portal.kernel.util.WebKeys"%>
+<%@page import="com.liferay.portal.theme.ThemeDisplay"%>
+
+<%@page import="com.liferay.portlet.PortletURLUtil" %>
 
 <portlet:defineObjects />
 <liferay-theme:defineObjects />
 
+<%
+	String baseurl=themeDisplay.getLayout().getRegularURL(request)+"/-/wiki/Main/";
+%>
